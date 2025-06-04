@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { CaretLeft, CaretRight, CaretDown } from '@phosphor-icons/react';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { Chapter } from '../types';
+import FilterButton from './FilterButton';
 
 interface FilterBarProps {
   activeFilters: string[];
@@ -11,31 +12,6 @@ interface FilterBarProps {
   onClassChange: (classes: string[]) => void;
   onUnitChange: (units: string[]) => void;
 }
-
-const FilterButton: React.FC<{
-  children: React.ReactNode;
-  isActive?: boolean;
-  onClick?: () => void;
-  hasDropdown?: boolean;
-  count?: number;
-}> = ({ children, isActive, onClick, hasDropdown, count }) => (
-  <button
-    onClick={onClick}
-    className={`flex items-center gap-1 text-sm font-medium px-3 py-2 rounded-lg border transition-colors
-      ${isActive 
-        ? 'bg-blue-50 text-blue-600 border-blue-200 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-800' 
-        : 'text-gray-600 hover:text-gray-900 border-gray-200 dark:text-gray-400 dark:hover:text-gray-300 dark:border-gray-700 dark:hover:border-gray-600'
-      }`}
-  >
-    {children}
-    {hasDropdown && <CaretDown className="h-4 w-4" />}
-    {count !== undefined && (
-      <span className="ml-1 text-xs bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded">
-        {count}
-      </span>
-    )}
-  </button>
-);
 
 const FilterBar: React.FC<FilterBarProps> = ({ 
   activeFilters, 

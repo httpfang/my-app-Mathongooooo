@@ -6,13 +6,15 @@ interface FilterButtonProps {
   isActive?: boolean;
   onClick?: () => void;
   hasDropdown?: boolean;
+  count?: number;
 }
 
 const FilterButton: React.FC<FilterButtonProps> = ({ 
   children, 
   isActive = false, 
   onClick, 
-  hasDropdown = false 
+  hasDropdown = false,
+  count
 }) => (
   <button
     onClick={onClick}
@@ -24,6 +26,11 @@ const FilterButton: React.FC<FilterButtonProps> = ({
   >
     <span>{children}</span>
     {hasDropdown && <CaretDown className="h-4 w-4" />}
+    {count !== undefined && (
+      <span className="ml-1 text-xs bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded">
+        {count}
+      </span>
+    )}
   </button>
 );
 
