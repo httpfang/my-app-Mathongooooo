@@ -12,8 +12,8 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ subject, onClick }) => (
     onClick={onClick}
     className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-left transition-colors ${
       subject.isActive 
-        ? 'bg-black text-white' 
-        : 'text-black hover:bg-gray-700 hover:text-white'
+        ? 'bg-black dark:bg-white text-white dark:text-black' 
+        : 'text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
     }`}
   >
     <div className="flex items-center space-x-3">

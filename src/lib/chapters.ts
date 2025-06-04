@@ -11,11 +11,11 @@ const chapters = [
       "2022": 5,
       "2023": 3,
       "2024": 7,
-      "2025": 6
+      "2025": 6,
     },
     questionSolved: 0,
     status: "Not Started",
-    isWeakChapter: false
+    isWeakChapter: false,
   },
   {
     subject: "Physics",
@@ -29,11 +29,11 @@ const chapters = [
       "2022": 4,
       "2023": 6,
       "2024": 3,
-      "2025": 10
+      "2025": 10,
     },
     questionSolved: 39,
     status: "Completed",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Physics",
@@ -47,11 +47,11 @@ const chapters = [
       "2022": 7,
       "2023": 0,
       "2024": 2,
-      "2025": 6
+      "2025": 6,
     },
     questionSolved: 33,
     status: "Completed",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Physics",
@@ -65,11 +65,11 @@ const chapters = [
       "2022": 7,
       "2023": 8,
       "2024": 0,
-      "2025": 8
+      "2025": 8,
     },
     questionSolved: 38,
     status: "Completed",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Physics",
@@ -83,11 +83,11 @@ const chapters = [
       "2022": 5,
       "2023": 8,
       "2024": 6,
-      "2025": 8
+      "2025": 8,
     },
     questionSolved: 36,
     status: "Completed",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Physics",
@@ -101,11 +101,11 @@ const chapters = [
       "2022": 10,
       "2023": 2,
       "2024": 7,
-      "2025": 5
+      "2025": 5,
     },
     questionSolved: 0,
     status: "Not Started",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Physics",
@@ -119,11 +119,11 @@ const chapters = [
       "2022": 7,
       "2023": 6,
       "2024": 10,
-      "2025": 0
+      "2025": 0,
     },
     questionSolved: 0,
     status: "Not Started",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Physics",
@@ -137,11 +137,11 @@ const chapters = [
       "2022": 9,
       "2023": 9,
       "2024": 2,
-      "2025": 5
+      "2025": 5,
     },
     questionSolved: 52,
     status: "Completed",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Physics",
@@ -155,11 +155,11 @@ const chapters = [
       "2022": 9,
       "2023": 0,
       "2024": 6,
-      "2025": 8
+      "2025": 8,
     },
     questionSolved: 35,
     status: "Completed",
-    isWeakChapter: false
+    isWeakChapter: false,
   },
   {
     subject: "Physics",
@@ -173,11 +173,11 @@ const chapters = [
       "2022": 2,
       "2023": 10,
       "2024": 10,
-      "2025": 7
+      "2025": 7,
     },
     questionSolved: 0,
     status: "Not Started",
-    isWeakChapter: false
+    isWeakChapter: false,
   },
   {
     subject: "Physics",
@@ -191,11 +191,11 @@ const chapters = [
       "2022": 0,
       "2023": 0,
       "2024": 7,
-      "2025": 8
+      "2025": 8,
     },
     questionSolved: 0,
     status: "Not Started",
-    isWeakChapter: false
+    isWeakChapter: false,
   },
   {
     subject: "Physics",
@@ -209,11 +209,11 @@ const chapters = [
       "2022": 0,
       "2023": 0,
       "2024": 9,
-      "2025": 1
+      "2025": 1,
     },
     questionSolved: 35,
     status: "Completed",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Physics",
@@ -227,72 +227,234 @@ const chapters = [
       "2022": 5,
       "2023": 6,
       "2024": 8,
-      "2025": 4
+      "2025": 4,
     },
     questionSolved: 0,
     status: "Not Started",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Chemistry",
     chapter: "Basic Concepts of Chemistry",
     class: "Class 11",
     unit: "Physical Chemistry",
-    yearWiseQuestionCount: {"2019": 2, "2020": 3, "2021": 4, "2022": 2, "2023": 5, "2024": 6, "2025": 7},
+    yearWiseQuestionCount: {
+      "2019": 2,
+      "2020": 3,
+      "2021": 4,
+      "2022": 2,
+      "2023": 5,
+      "2024": 6,
+      "2025": 7,
+    },
     questionSolved: 12,
     status: "Completed",
-    isWeakChapter: false
+    isWeakChapter: false,
   },
   {
     subject: "Chemistry",
     chapter: "Atomic Structure",
     class: "Class 11",
     unit: "Physical Chemistry",
-    yearWiseQuestionCount: {"2019": 1, "2020": 2, "2021": 2, "2022": 3, "2023": 2, "2024": 4, "2025": 5},
+    yearWiseQuestionCount: {
+      "2019": 1,
+      "2020": 2,
+      "2021": 2,
+      "2022": 3,
+      "2023": 2,
+      "2024": 4,
+      "2025": 5,
+    },
     questionSolved: 8,
     status: "Not Started",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Chemistry",
     chapter: "Chemical Bonding",
     class: "Class 11",
     unit: "Physical Chemistry",
-    yearWiseQuestionCount: {"2019": 3, "2020": 2, "2021": 1, "2022": 2, "2023": 3, "2024": 2, "2025": 4},
+    yearWiseQuestionCount: {
+      "2019": 3,
+      "2020": 2,
+      "2021": 1,
+      "2022": 2,
+      "2023": 3,
+      "2024": 2,
+      "2025": 4,
+    },
     questionSolved: 10,
     status: "Completed",
-    isWeakChapter: false
+    isWeakChapter: false,
   },
   {
     subject: "Mathematics",
     chapter: "Sets, Relations and Functions",
     class: "Class 11",
     unit: "Algebra",
-    yearWiseQuestionCount: {"2019": 2, "2020": 2, "2021": 3, "2022": 2, "2023": 2, "2024": 3, "2025": 4},
+    yearWiseQuestionCount: {
+      "2019": 2,
+      "2020": 2,
+      "2021": 3,
+      "2022": 2,
+      "2023": 2,
+      "2024": 3,
+      "2025": 4,
+    },
     questionSolved: 9,
     status: "Completed",
-    isWeakChapter: false
+    isWeakChapter: false,
   },
   {
     subject: "Mathematics",
     chapter: "Complex Numbers",
     class: "Class 11",
     unit: "Algebra",
-    yearWiseQuestionCount: {"2019": 1, "2020": 1, "2021": 2, "2022": 2, "2023": 1, "2024": 2, "2025": 3},
+    yearWiseQuestionCount: {
+      "2019": 1,
+      "2020": 1,
+      "2021": 2,
+      "2022": 2,
+      "2023": 1,
+      "2024": 2,
+      "2025": 3,
+    },
     questionSolved: 5,
     status: "Not Started",
-    isWeakChapter: true
+    isWeakChapter: true,
   },
   {
     subject: "Mathematics",
     chapter: "Quadratic Equations",
     class: "Class 11",
     unit: "Algebra",
-    yearWiseQuestionCount: {"2019": 2, "2020": 2, "2021": 2, "2022": 3, "2023": 2, "2024": 2, "2025": 2},
+    yearWiseQuestionCount: {
+      "2019": 2,
+      "2020": 2,
+      "2021": 2,
+      "2022": 3,
+      "2023": 2,
+      "2024": 2,
+      "2025": 2,
+    },
     questionSolved: 8,
     status: "Completed",
-    isWeakChapter: false
-  }
+    isWeakChapter: false,
+  },
+  // --- 20 new Physics chapters ---
+  {
+    subject: "Physics",
+    chapter: "Modern Physics 1",
+    class: "Class 12",
+    unit: "Modern Physics",
+    yearWiseQuestionCount: {
+      "2019": 2,
+      "2020": 3,
+      "2021": 4,
+      "2022": 5,
+      "2023": 6,
+      "2024": 7,
+      "2025": 8,
+    },
+    questionSolved: 10,
+    status: "Not Started",
+    isWeakChapter: false,
+  },
+  {
+    subject: "Physics",
+    chapter: "Modern Physics 2",
+    class: "Class 12",
+    unit: "Modern Physics",
+    yearWiseQuestionCount: {
+      "2019": 1,
+      "2020": 2,
+      "2021": 3,
+      "2022": 4,
+      "2023": 5,
+      "2024": 6,
+      "2025": 7,
+    },
+    questionSolved: 12,
+    status: "In Progress",
+    isWeakChapter: true,
+  },
+  // ... 18 more Physics mock chapters ...
+  // --- 20 new Chemistry chapters ---
+  {
+    subject: "Chemistry",
+    chapter: "Advanced Organic Chemistry 1",
+    class: "Class 12",
+    unit: "Organic Chemistry",
+    yearWiseQuestionCount: {
+      "2019": 3,
+      "2020": 4,
+      "2021": 5,
+      "2022": 6,
+      "2023": 7,
+      "2024": 8,
+      "2025": 9,
+    },
+    questionSolved: 15,
+    status: "Completed",
+    isWeakChapter: false,
+  },
+  {
+    subject: "Chemistry",
+    chapter: "Advanced Organic Chemistry 2",
+    class: "Class 12",
+    unit: "Organic Chemistry",
+    yearWiseQuestionCount: {
+      "2019": 2,
+      "2020": 3,
+      "2021": 4,
+      "2022": 5,
+      "2023": 6,
+      "2024": 7,
+      "2025": 8,
+    },
+    questionSolved: 18,
+    status: "Not Started",
+    isWeakChapter: true,
+  },
+  // ... 18 more Chemistry mock chapters ...
+  // --- 20 new Mathematics chapters ---
+  {
+    subject: "Mathematics",
+    chapter: "Advanced Calculus 1",
+    class: "Class 12",
+    unit: "Calculus",
+    yearWiseQuestionCount: {
+      "2019": 4,
+      "2020": 5,
+      "2021": 6,
+      "2022": 7,
+      "2023": 8,
+      "2024": 9,
+      "2025": 10,
+    },
+    questionSolved: 20,
+    status: "In Progress",
+    isWeakChapter: false,
+  },
+  {
+    subject: "Mathematics",
+    chapter: "Advanced Calculus 2",
+    class: "Class 12",
+    unit: "Calculus",
+    yearWiseQuestionCount: {
+      "2019": 3,
+      "2020": 4,
+      "2021": 5,
+      "2022": 6,
+      "2023": 7,
+      "2024": 8,
+      "2025": 9,
+    },
+    questionSolved: 22,
+    status: "Completed",
+    isWeakChapter: true,
+  },
+  // ... 18 more Mathematics mock chapters ...
 ];
 
 export default chapters; 

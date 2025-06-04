@@ -24,14 +24,14 @@ const TabBar: React.FC<TabBarProps> = ({ subjects, activeSubject, setActiveSubje
   };
 
   const getActiveColor = (subjectName: string) => {
-    if (subjectName === 'Physics PYQs') return 'border-orange-500 text-orange-600';
-    if (subjectName === 'Chemistry PYQs') return 'border-green-500 text-green-600';
-    if (subjectName === 'Mathematics PYQs') return 'border-blue-500 text-blue-600';
-    return 'border-blue-500 text-blue-600';
+    if (subjectName === 'Physics PYQs') return 'border-orange-500 text-orange-600 dark:text-orange-400';
+    if (subjectName === 'Chemistry PYQs') return 'border-green-500 text-green-600 dark:text-green-400';
+    if (subjectName === 'Mathematics PYQs') return 'border-blue-500 text-blue-600 dark:text-blue-400';
+    return 'border-blue-500 text-blue-600 dark:text-blue-400';
   };
 
   return (
-    <div className="md:hidden bg-white  border-gray-200">
+    <div className="md:hidden bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
       <div className="flex">
         {subjects.map((subject) => {
           const isActive = subject.name === activeSubject;
@@ -42,7 +42,7 @@ const TabBar: React.FC<TabBarProps> = ({ subjects, activeSubject, setActiveSubje
               className={`flex-1 flex flex-col items-center py-3 px-2 transition-colors relative ${
                 isActive 
                   ? getActiveColor(subject.name)
-                  : 'text-gray-500 hover:text-gray-700'
+                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
               }`}
             >
               <div className="mb-1">

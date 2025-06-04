@@ -9,7 +9,7 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ subjects, activeSubject, setActiveSubject }) => (
-  <div className="hidden md:block w-80 bg-white p-4 space-y-2">
+  <div className="hidden md:block w-80 bg-white dark:bg-gray-800 p-4 space-y-2">
     {subjects.map((subject, index) => (
       <SidebarItem
         key={index}

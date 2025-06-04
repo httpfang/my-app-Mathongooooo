@@ -19,6 +19,9 @@ const subjects: Subject[] = [
 const JEEMainPYQsInterface: React.FC = () => {
   const [activeFilters, setActiveFilters] = useState<string[]>(['Weak Chapters']);
   const [activeSubject, setActiveSubject] = useState<string>('Physics PYQs');
+  const [selectedClasses, setSelectedClasses] = useState<string[]>([]);
+  const [selectedUnits, setSelectedUnits] = useState<string[]>([]);
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
   const toggleFilter = (filter: string) => {
     setActiveFilters(prev =>
@@ -28,8 +31,14 @@ const JEEMainPYQsInterface: React.FC = () => {
     );
   };
 
+  const toggleSortOrder = () => {
+    setSortOrder((prev) => (prev === 'asc' ? 'desc' : 'asc'));
+  };
+
   // Filtering logic
   let filteredChapters = chaptersData;
+  
+  // Filter by subject
   if (activeSubject === 'Physics PYQs') {
     filteredChapters = filteredChapters.filter(ch => ch.subject.toLowerCase() === 'physics');
   } else if (activeSubject === 'Chemistry PYQs') {
@@ -37,15 +46,38 @@ const JEEMainPYQsInterface: React.FC = () => {
   } else if (activeSubject === 'Mathematics PYQs') {
     filteredChapters = filteredChapters.filter(ch => ch.subject.toLowerCase() === 'mathematics');
   }
+
+  // Filter by class
+  if (selectedClasses.length > 0) {
+    filteredChapters = filteredChapters.filter(ch => selectedClasses.includes(ch.class));
+  }
+
+  // Filter by unit
+  if (selectedUnits.length > 0) {
+    filteredChapters = filteredChapters.filter(ch => selectedUnits.includes(ch.unit));
+  }
+
+  // Filter by status
   if (activeFilters.includes('Not Started')) {
     filteredChapters = filteredChapters.filter(ch => ch.status === 'Not Started');
   }
+
+  // Filter by weak chapters
   if (activeFilters.includes('Weak Chapters')) {
     filteredChapters = filteredChapters.filter(ch => ch.isWeakChapter);
   }
 
+  // Sort chapters alphabetically by chapter name
+  const sortedChapters = [...filteredChapters].sort((a, b) => {
+    if (sortOrder === 'asc') {
+      return a.chapter.localeCompare(b.chapter);
+    } else {
+      return b.chapter.localeCompare(a.chapter);
+    }
+  });
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <CombinedHeader activeSubject={activeSubject} />
       <TabBar 
         subjects={subjects} 
@@ -55,16 +87,40 @@ const JEEMainPYQsInterface: React.FC = () => {
       
       {/* Mobile Layout */}
       <div className="md:hidden">
-        <FilterBar activeFilters={activeFilters} toggleFilter={toggleFilter} />
-        <ChapterList chapters={filteredChapters} />
+        <FilterBar 
+          activeFilters={activeFilters} 
+          toggleFilter={toggleFilter}
+          chapters={filteredChapters}
+          selectedClasses={selectedClasses}
+          selectedUnits={selectedUnits}
+          onClassChange={setSelectedClasses}
+          onUnitChange={setSelectedUnits}
+        />
+        <ChapterList 
+          chapters={sortedChapters} 
+          sortOrder={sortOrder} 
+          toggleSortOrder={toggleSortOrder} 
+        />
       </div>
       
       {/* Desktop Layout */}
       <div className="hidden md:flex">
         <Sidebar subjects={subjects} activeSubject={activeSubject} setActiveSubject={setActiveSubject} />
         <div className="flex-1">
-          <FilterBar activeFilters={activeFilters} toggleFilter={toggleFilter} />
-          <ChapterList chapters={filteredChapters} />
+          <FilterBar 
+            activeFilters={activeFilters} 
+            toggleFilter={toggleFilter}
+            chapters={filteredChapters}
+            selectedClasses={selectedClasses}
+            selectedUnits={selectedUnits}
+            onClassChange={setSelectedClasses}
+            onUnitChange={setSelectedUnits}
+          />
+          <ChapterList 
+            chapters={sortedChapters} 
+            sortOrder={sortOrder} 
+            toggleSortOrder={toggleSortOrder} 
+          />
         </div>
       </div>
     </div>
