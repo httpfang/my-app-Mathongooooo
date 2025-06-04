@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import { CaretRight } from '@phosphor-icons/react';
 import { Subject } from '../types';
 
 interface SidebarItemProps {
@@ -20,7 +20,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ subject, onClick }) => (
       <div className={`w-6 h-6 rounded flex items-center justify-center text-white text-xs ${subject.color}`}>{subject.icon}</div>
       <span className="font-medium">{subject.name}</span>
     </div>
-    <ChevronRight className="w-4 h-4" />
+    <CaretRight className="h-4 w-4" />
   </button>
 );
 

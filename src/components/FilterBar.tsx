@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { CaretLeft, CaretRight, CaretDown } from '@phosphor-icons/react';
 import { Chapter } from '../types';
 
 interface FilterBarProps {
@@ -28,7 +28,7 @@ const FilterButton: React.FC<{
       }`}
   >
     {children}
-    {hasDropdown && <ChevronDown className="w-4 h-4" />}
+    {hasDropdown && <CaretDown className="h-4 w-4" />}
     {count !== undefined && (
       <span className="ml-1 text-xs bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded">
         {count}
@@ -81,7 +81,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
             className="flex-shrink-0 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 -ml-1"
             aria-label="Scroll left"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <CaretLeft className="h-4 w-4" />
           </button>
 
           <div 
@@ -176,7 +176,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
             className="flex-shrink-0 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 -mr-1"
             aria-label="Scroll right"
           >
-            <ChevronRight className="w-5 h-5" />
+            <CaretRight className="h-4 w-4" />
           </button>
         </div>
       </div>

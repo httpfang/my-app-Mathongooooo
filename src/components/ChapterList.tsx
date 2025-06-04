@@ -1,7 +1,7 @@
 import React from 'react';
 import ChapterCard from './ChapterCard';
 import { Chapter } from '../types';
-import { ArrowUp, ArrowDown } from 'lucide-react';
+import { CaretUp, CaretDown } from '@phosphor-icons/react';
 
 interface ChapterListProps {
   chapters: Chapter[];
@@ -18,7 +18,7 @@ const ChapterList: React.FC<ChapterListProps> = ({ chapters, sortOrder, toggleSo
           className="flex items-center gap-1 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium text-sm whitespace-nowrap"
           onClick={toggleSortOrder}
         >
-          {sortOrder === 'asc' ? <ArrowUp className="w-4 h-4" /> : <ArrowDown className="w-4 h-4" />}
+          {sortOrder === 'asc' ? <CaretUp className="h-4 w-4" /> : <CaretDown className="h-4 w-4" />}
           <span>Sort</span>
         </button>
       </div>

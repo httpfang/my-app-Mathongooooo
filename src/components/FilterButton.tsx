@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown } from 'lucide-react';
+import { CaretDown } from '@phosphor-icons/react';
 
 interface FilterButtonProps {
   children: React.ReactNode;
@@ -23,7 +23,7 @@ const FilterButton: React.FC<FilterButtonProps> = ({
     }`}
   >
     <span>{children}</span>
-    {hasDropdown && <ChevronDown className="w-4 h-4" />}
+    {hasDropdown && <CaretDown className="h-4 w-4" />}
   </button>
 );
 

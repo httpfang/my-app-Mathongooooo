@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, ArrowDown } from 'lucide-react';
+import { CaretUp, CaretDown } from '@phosphor-icons/react';
 import { Chapter } from '../types';
 
 const getChapterIcon = (name: string) => {
@@ -19,9 +19,9 @@ const getChapterIcon = (name: string) => {
 
 const getTrendIcon = (trend: number) => {
   if (trend > 0) {
-    return <ArrowUp className="w-4 h-4 text-green-500" />;
+    return <CaretUp className="h-4 w-4" />;
   } else if (trend < 0) {
-    return <ArrowDown className="w-4 h-4 text-red-500" />;
+    return <CaretDown className="h-4 w-4" />;
   }
   return null;
 };
